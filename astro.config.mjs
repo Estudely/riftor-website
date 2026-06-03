@@ -5,6 +5,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://estudely.github.io',
-  base: '/riftor-website',
+  site: 'https://riftor.dev',
 });

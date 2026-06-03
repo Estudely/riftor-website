@@ -110,11 +110,16 @@ import PageWidgets from '../components/PageWidgets.astro';
         <div class="game-frame" id="install-block">
           <div class="flex gap-0 border-b-2 border-void-border-bright overflow-x-auto" id="install-tabs">
             <button data-tab="pip" class="install-tab active px-3 sm:px-4 py-2.5 text-[12px] sm:text-[13px] text-rift-muted transition-colors shrink-0">pip</button>
+            <button data-tab="source" class="install-tab px-3 sm:px-4 py-2.5 text-[12px] sm:text-[13px] text-rift-dim hover:text-rift-muted transition-colors shrink-0">source</button>
           </div>
           <div class="p-3 sm:p-4 text-[13px] sm:text-[14px] overflow-x-auto">
             <div data-panel="pip" class="flex items-center justify-between gap-3">
               <code class="whitespace-nowrap"><span class="text-rift-dim select-none">$ </span><span class="text-rift-text">pip install riftor</span></code>
               <button data-copy="pip install riftor" class="text-rift-dim hover:text-rift-amber text-[11px] silkscreen transition-colors shrink-0">COPY</button>
+            </div>
+            <div data-panel="source" class="hidden flex items-center justify-between gap-3">
+              <code class="whitespace-nowrap"><span class="text-rift-dim select-none">$ </span><span class="text-rift-text">git clone https://github.com/Estudely/riftor && cd riftor && uv sync && uv run riftor</span></code>
+              <button data-copy="git clone https://github.com/Estudely/riftor && cd riftor && uv sync && uv run riftor" class="text-rift-dim hover:text-rift-amber text-[11px] silkscreen transition-colors shrink-0">COPY</button>
             </div>
           </div>
         </div>

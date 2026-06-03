@@ -1,0 +1,448 @@
+---
+---
+
+<!-- All widgets hidden on mobile, visible sm+ -->
+<div class="hidden sm:block pointer-events-none" id="page-widgets" style="position:fixed;inset:0;z-index:40;overflow:hidden;">
+
+  <!-- ═══ PIXEL MONKEY — right edge, clinging & swinging ═══ -->
+  <div class="pointer-events-auto" id="monkey-widget" style="position:absolute;right:0;top:180px;">
+    <svg width="48" height="64" viewBox="0 0 24 32" fill="none" style="image-rendering:pixelated;cursor:pointer;" id="monkey-svg">
+      <!-- tail curling from top -->
+      <rect x="4" y="0" width="2" height="2" fill="#8b6914"/>
+      <rect x="2" y="2" width="2" height="2" fill="#8b6914"/>
+      <rect x="0" y="4" width="2" height="4" fill="#8b6914"/>
+      <rect x="2" y="7" width="2" height="2" fill="#8b6914"/>
+
+      <!-- arm reaching right (gripping edge) -->
+      <rect x="18" y="8" width="2" height="2" fill="#c4841d"/>
+      <rect x="20" y="7" width="2" height="2" fill="#c4841d"/>
+      <rect x="22" y="6" width="2" height="3" fill="#e09f3e"/>
+
+      <!-- head -->
+      <rect x="8" y="6" width="8" height="2" fill="#c4841d"/>
+      <rect x="6" y="8" width="12" height="6" fill="#c4841d"/>
+
+      <!-- face -->
+      <rect x="8" y="9" width="8" height="4" fill="#e09f3e"/>
+
+      <!-- eyes (normal) -->
+      <g id="monkey-eyes-normal">
+        <rect x="9" y="10" width="2" height="2" fill="#08080c"/>
+        <rect x="13" y="10" width="2" height="2" fill="#08080c"/>
+        <rect x="9" y="10" width="1" height="1" fill="#fff"/>
+        <rect x="13" y="10" width="1" height="1" fill="#fff"/>
+      </g>
+      <!-- eyes (hover - wide/surprised) -->
+      <g id="monkey-eyes-hover" style="display:none;">
+        <rect x="8" y="9" width="3" height="3" fill="#08080c"/>
+        <rect x="13" y="9" width="3" height="3" fill="#08080c"/>
+        <rect x="9" y="9" width="1" height="1" fill="#5eead4"/>
+        <rect x="14" y="9" width="1" height="1" fill="#5eead4"/>
+      </g>
+
+      <!-- nose/mouth -->
+      <rect x="11" y="11" width="2" height="1" fill="#a1653a"/>
+      <rect x="10" y="12" width="4" height="1" fill="#a1653a"/>
+
+      <!-- ears -->
+      <rect x="5" y="9" width="2" height="3" fill="#e09f3e"/>
+      <rect x="17" y="9" width="2" height="3" fill="#e09f3e"/>
+
+      <!-- body -->
+      <rect x="8" y="14" width="8" height="6" fill="#c4841d"/>
+
+      <!-- left arm hanging -->
+      <rect x="6" y="14" width="2" height="6" fill="#c4841d"/>
+      <rect x="5" y="20" width="2" height="2" fill="#e09f3e"/>
+
+      <!-- legs dangling -->
+      <rect x="9" y="20" width="2" height="4" fill="#c4841d"/>
+      <rect x="13" y="20" width="2" height="4" fill="#c4841d"/>
+      <rect x="8" y="24" width="3" height="2" fill="#e09f3e"/>
+      <rect x="13" y="24" width="3" height="2" fill="#e09f3e"/>
+
+      <!-- belly patch -->
+      <rect x="10" y="15" width="4" height="3" fill="#e09f3e"/>
+    </svg>
+  </div>
+
+  <!-- ═══ PIXEL SPIDER — top-left, hanging from thread ═══ -->
+  <div class="pointer-events-auto spider-wrapper" style="position:absolute;left:32px;top:100px;cursor:pointer;">
+    <!-- thread -->
+    <div class="spider-thread" style="width:1px;height:60px;background:#52525b;margin:0 auto;"></div>
+    <svg width="24" height="24" viewBox="0 0 12 12" fill="none" style="image-rendering:pixelated;" class="spider-dangle">
+      <!-- body -->
+      <rect x="4" y="2" width="4" height="3" fill="#52525b"/>
+      <rect x="3" y="5" width="6" height="4" fill="#27272a"/>
+      <!-- eyes -->
+      <rect x="4" y="3" width="1" height="1" fill="#fb7185"/>
+      <rect x="7" y="3" width="1" height="1" fill="#fb7185"/>
+      <!-- legs left -->
+      <rect x="1" y="4" width="2" height="1" fill="#52525b"/>
+      <rect x="0" y="5" width="2" height="1" fill="#52525b"/>
+      <rect x="1" y="6" width="2" height="1" fill="#52525b"/>
+      <rect x="0" y="7" width="2" height="1" fill="#52525b"/>
+      <!-- legs right -->
+      <rect x="9" y="4" width="2" height="1" fill="#52525b"/>
+      <rect x="10" y="5" width="2" height="1" fill="#52525b"/>
+      <rect x="9" y="6" width="2" height="1" fill="#52525b"/>
+      <rect x="10" y="7" width="2" height="1" fill="#52525b"/>
+    </svg>
+  </div>
+
+  <!-- ═══ PIXEL GHOST — floating left side ═══ -->
+  <div class="ghost-float pointer-events-auto" style="position:absolute;left:16px;top:55%;cursor:pointer;">
+    <svg width="32" height="36" viewBox="0 0 16 18" fill="none" style="image-rendering:pixelated;opacity:0.25;">
+      <!-- body -->
+      <rect x="4" y="0" width="8" height="2" fill="#a1a1aa"/>
+      <rect x="2" y="2" width="12" height="10" fill="#a1a1aa"/>
+      <!-- eyes -->
+      <rect x="4" y="4" width="3" height="3" fill="#08080c"/>
+      <rect x="9" y="4" width="3" height="3" fill="#08080c"/>
+      <rect x="5" y="5" width="1" height="1" fill="#5eead4"/>
+      <rect x="10" y="5" width="1" height="1" fill="#5eead4"/>
+      <!-- mouth -->
+      <rect x="6" y="8" width="4" height="2" fill="#08080c"/>
+      <!-- wavy bottom -->
+      <rect x="2" y="12" width="2" height="3" fill="#a1a1aa"/>
+      <rect x="6" y="12" width="2" height="3" fill="#a1a1aa"/>
+      <rect x="10" y="12" width="2" height="3" fill="#a1a1aa"/>
+      <rect x="4" y="12" width="2" height="2" fill="#a1a1aa"/>
+      <rect x="8" y="12" width="2" height="2" fill="#a1a1aa"/>
+      <rect x="12" y="12" width="2" height="2" fill="#a1a1aa"/>
+    </svg>
+  </div>
+
+  <!-- ═══ PIXEL BAT — top right area ═══ -->
+  <div class="bat-flap pointer-events-auto" style="position:absolute;right:60px;top:35%;cursor:pointer;">
+    <svg width="32" height="20" viewBox="0 0 16 10" fill="none" style="image-rendering:pixelated;opacity:0.2;">
+      <!-- wing left -->
+      <rect x="0" y="2" width="2" height="4" fill="#52525b"/>
+      <rect x="2" y="1" width="2" height="5" fill="#52525b"/>
+      <rect x="4" y="0" width="2" height="6" fill="#52525b"/>
+      <!-- body -->
+      <rect x="6" y="1" width="4" height="6" fill="#27272a"/>
+      <!-- wing right -->
+      <rect x="10" y="0" width="2" height="6" fill="#52525b"/>
+      <rect x="12" y="1" width="2" height="5" fill="#52525b"/>
+      <rect x="14" y="2" width="2" height="4" fill="#52525b"/>
+      <!-- eyes -->
+      <rect x="7" y="2" width="1" height="1" fill="#e09f3e"/>
+      <rect x="8" y="2" width="1" height="1" fill="#e09f3e"/>
+      <!-- ears -->
+      <rect x="6" y="0" width="1" height="2" fill="#27272a"/>
+      <rect x="9" y="0" width="1" height="2" fill="#27272a"/>
+      <!-- feet -->
+      <rect x="7" y="7" width="1" height="2" fill="#27272a"/>
+      <rect x="8" y="7" width="1" height="2" fill="#27272a"/>
+    </svg>
+  </div>
+
+  <!-- ═══ WALKING HACKER — roams bottom of screen ═══ -->
+  <div class="pointer-events-auto" id="walker" style="position:absolute;bottom:4px;left:50%;cursor:pointer;">
+    <!-- emote bubble -->
+    <div id="walker-emote" style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);font-size:16px;opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;"></div>
+    <svg width="40" height="48" viewBox="0 0 20 24" fill="none" style="image-rendering:pixelated;" id="walker-svg">
+      <!-- beanie -->
+      <rect x="6" y="0" width="8" height="2" fill="#52525b"/>
+      <rect x="6" y="0" width="8" height="1" fill="#3f3f46"/>
+      <!-- head -->
+      <rect x="5" y="2" width="10" height="6" fill="#e09f3e"/>
+      <!-- shades -->
+      <rect x="6" y="3" width="3" height="2" fill="#08080c"/>
+      <rect x="11" y="3" width="3" height="2" fill="#08080c"/>
+      <rect x="9" y="4" width="2" height="1" fill="#52525b"/>
+      <rect x="6" y="3" width="1" height="1" fill="#5eead4"/>
+      <rect x="11" y="3" width="1" height="1" fill="#5eead4"/>
+      <!-- mouth -->
+      <rect x="8" y="6" width="4" height="1" fill="#c4841d"/>
+      <!-- body -->
+      <rect x="6" y="8" width="8" height="7" fill="#27272a"/>
+      <rect x="8" y="8" width="4" height="2" fill="#3f3f46"/>
+      <!-- arms -->
+      <g id="walker-arms">
+        <rect x="4" y="9" width="2" height="5" fill="#27272a"/>
+        <rect x="14" y="9" width="2" height="5" fill="#27272a"/>
+        <rect x="3" y="14" width="2" height="1" fill="#e09f3e"/>
+        <rect x="15" y="14" width="2" height="1" fill="#e09f3e"/>
+      </g>
+      <!-- legs -->
+      <g id="walker-legs">
+        <rect x="7" y="15" width="2" height="5" fill="#27272a"/>
+        <rect x="11" y="15" width="2" height="5" fill="#27272a"/>
+        <!-- shoes -->
+        <rect x="6" y="20" width="3" height="2" fill="#52525b"/>
+        <rect x="11" y="20" width="3" height="2" fill="#52525b"/>
+        <rect x="6" y="22" width="3" height="1" fill="#3f3f46"/>
+        <rect x="11" y="22" width="3" height="1" fill="#3f3f46"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ═══ COFFEE CUP — bottom left, steaming ═══ -->
+  <div class="pointer-events-auto coffee-widget" style="position:absolute;left:24px;bottom:16px;cursor:pointer;">
+    <div style="position:relative;">
+      <!-- steam particles -->
+      <div class="steam-rise" style="position:absolute;top:-12px;left:8px;">
+        <svg width="20" height="14" viewBox="0 0 10 7" fill="none" style="image-rendering:pixelated;">
+          <rect x="2" y="5" width="1" height="1" fill="#52525b" opacity="0.5"/>
+          <rect x="5" y="3" width="1" height="1" fill="#52525b" opacity="0.3"/>
+          <rect x="3" y="1" width="1" height="1" fill="#52525b" opacity="0.2"/>
+          <rect x="7" y="0" width="1" height="1" fill="#52525b" opacity="0.15"/>
+        </svg>
+      </div>
+      <svg width="28" height="24" viewBox="0 0 14 12" fill="none" style="image-rendering:pixelated;">
+        <!-- cup -->
+        <rect x="2" y="2" width="8" height="2" fill="#a1a1aa"/>
+        <rect x="1" y="4" width="10" height="5" fill="#52525b"/>
+        <rect x="2" y="4" width="8" height="4" fill="#3f3f46"/>
+        <!-- coffee surface -->
+        <rect x="3" y="5" width="6" height="1" fill="#8b6914"/>
+        <!-- handle -->
+        <rect x="11" y="4" width="2" height="1" fill="#52525b"/>
+        <rect x="12" y="5" width="1" height="2" fill="#52525b"/>
+        <rect x="11" y="7" width="2" height="1" fill="#52525b"/>
+        <!-- saucer -->
+        <rect x="0" y="9" width="12" height="2" fill="#3f3f46"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  /* Monkey swing */
+  #monkey-widget {
+    animation: monkey-swing 4s ease-in-out infinite;
+    transform-origin: top right;
+  }
+  @keyframes monkey-swing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-2deg); }
+  }
+  #monkey-widget:hover {
+    animation: monkey-wiggle 0.3s ease infinite;
+  }
+  @keyframes monkey-wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(4deg) scale(1.05); }
+    75% { transform: rotate(-4deg) scale(1.05); }
+  }
+
+  /* Spider dangle */
+  .spider-dangle {
+    animation: spider-sway 5s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  @keyframes spider-sway {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(8deg); }
+    70% { transform: rotate(-5deg); }
+  }
+  /* Spider hover — drops down on thread then springs back */
+  .spider-wrapper .spider-thread { transition: height 0.4s ease; }
+  .spider-wrapper:hover .spider-thread { height: 90px !important; }
+  .spider-wrapper:hover .spider-dangle {
+    animation: spider-panic 0.15s linear infinite;
+  }
+  @keyframes spider-panic {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(12deg); }
+    75% { transform: rotate(-12deg); }
+  }
+
+  /* Ghost float */
+  .ghost-float {
+    animation: ghost-drift 8s ease-in-out infinite;
+    transition: opacity 0.3s;
+  }
+  .ghost-float svg { transition: opacity 0.3s, transform 0.3s; }
+  @keyframes ghost-drift {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(6px, -12px); }
+    50% { transform: translate(-4px, -20px); }
+    75% { transform: translate(8px, -8px); }
+  }
+  /* Ghost hover — becomes visible and shakes like startled */
+  .ghost-float:hover svg {
+    opacity: 0.7 !important;
+    transform: scale(1.2);
+  }
+  .ghost-float:hover {
+    animation: ghost-startled 0.2s ease infinite;
+  }
+  @keyframes ghost-startled {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 2px); }
+    50% { transform: translate(3px, -2px); }
+    75% { transform: translate(-2px, -1px); }
+  }
+
+  /* Bat flap */
+  .bat-flap {
+    animation: bat-fly 6s ease-in-out infinite;
+  }
+  .bat-flap svg { transition: opacity 0.3s, transform 0.3s; }
+  @keyframes bat-fly {
+    0%, 100% { transform: translate(0, 0) scaleY(1); }
+    15% { transform: translate(-8px, -6px) scaleY(0.85); }
+    30% { transform: translate(-4px, -12px) scaleY(1); }
+    45% { transform: translate(4px, -8px) scaleY(0.85); }
+    60% { transform: translate(8px, -14px) scaleY(1); }
+    75% { transform: translate(2px, -4px) scaleY(0.85); }
+  }
+  /* Bat hover — flaps frantically and becomes visible */
+  .bat-flap:hover svg {
+    opacity: 0.6 !important;
+    transform: scale(1.3);
+  }
+  .bat-flap:hover {
+    animation: bat-panic 0.2s linear infinite;
+  }
+  @keyframes bat-panic {
+    0%, 100% { transform: translate(0, 0) scaleY(1); }
+    50% { transform: translate(0, -4px) scaleY(0.6); }
+  }
+
+  /* Steam rise */
+  .steam-rise {
+    animation: steam 3s ease-in-out infinite;
+  }
+  @keyframes steam {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-6px); opacity: 0.8; }
+  }
+  /* Coffee hover — jiggles and steam intensifies */
+  .coffee-widget { transition: transform 0.2s; }
+  .coffee-widget:hover { transform: rotate(-5deg) scale(1.15); }
+  .coffee-widget:hover .steam-rise {
+    animation: steam-hot 0.8s ease-in-out infinite;
+  }
+  @keyframes steam-hot {
+    0%, 100% { transform: translateY(0); opacity: 0.8; }
+    50% { transform: translateY(-10px); opacity: 1; }
+  }
+
+  /* Walker bob while moving */
+  #walker.walking #walker-svg {
+    animation: walk-bob 0.3s steps(2) infinite;
+  }
+  @keyframes walk-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+  }
+  /* Walker idle breathing */
+  #walker:not(.walking) #walker-svg {
+    animation: idle-breathe 3s ease-in-out infinite;
+  }
+  @keyframes idle-breathe {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-1px); }
+  }
+  /* Walker hover — jump */
+  #walker:hover #walker-svg {
+    animation: walker-jump 0.4s ease;
+  }
+  @keyframes walker-jump {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+<script>
+  // Monkey eye swap on hover
+  const monkeySvg = document.getElementById('monkey-svg');
+  const eyesNormal = document.getElementById('monkey-eyes-normal');
+  const eyesHover = document.getElementById('monkey-eyes-hover');
+
+  monkeySvg?.addEventListener('mouseenter', () => {
+    if (eyesNormal) eyesNormal.style.display = 'none';
+    if (eyesHover) eyesHover.style.display = '';
+  });
+  monkeySvg?.addEventListener('mouseleave', () => {
+    if (eyesNormal) eyesNormal.style.display = '';
+    if (eyesHover) eyesHover.style.display = 'none';
+  });
+
+  // ═══ WALKING HACKER ═══
+  const walker = document.getElementById('walker');
+  const walkerSvg = document.getElementById('walker-svg');
+  const walkerEmote = document.getElementById('walker-emote');
+  if (walker && walkerSvg && walkerEmote) {
+    let posX = Math.round(window.innerWidth * 0.6);
+    let targetX = posX;
+    let facingLeft = false;
+    let isWalking = false;
+    let emoteTimeout: number | undefined;
+
+    walker.style.left = posX + 'px';
+
+    const emotes = ['💻', '🔓', '☕', '🛡️', '⚡', '👀', '🔥', '💀', '🎯', '🐛', '😎', '🚀', '💤', '🤔', '🔑'];
+
+    function showEmote() {
+      const em = emotes[Math.floor(Math.random() * emotes.length)];
+      walkerEmote.textContent = em;
+      walkerEmote.style.opacity = '1';
+      walkerEmote.style.transform = 'translateX(-50%) translateY(-4px)';
+      clearTimeout(emoteTimeout);
+      emoteTimeout = window.setTimeout(() => {
+        walkerEmote.style.opacity = '0';
+        walkerEmote.style.transform = 'translateX(-50%) translateY(0)';
+      }, 2000);
+    }
+
+    function pickTarget() {
+      const margin = 60;
+      targetX = margin + Math.round(Math.random() * (window.innerWidth - margin * 2));
+    }
+
+    function step() {
+      const dx = targetX - posX;
+      if (Math.abs(dx) < 2) {
+        // arrived — idle
+        if (isWalking) {
+          isWalking = false;
+          walker.classList.remove('walking');
+          // chance to emote when stopping
+          if (Math.random() < 0.6) showEmote();
+        }
+        // pick new target after a random pause
+        setTimeout(pickTarget, 2000 + Math.random() * 5000);
+      } else {
+        // walk toward target
+        if (!isWalking) {
+          isWalking = true;
+          walker.classList.add('walking');
+        }
+        const dir = dx > 0 ? 1 : -1;
+        const speed = 0.6 + Math.random() * 0.3;
+        posX += dir * speed;
+        walker.style.left = Math.round(posX) + 'px';
+
+        // flip sprite
+        const shouldFaceLeft = dir < 0;
+        if (shouldFaceLeft !== facingLeft) {
+          facingLeft = shouldFaceLeft;
+          walkerSvg.style.transform = facingLeft ? 'scaleX(-1)' : '';
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    // click to emote
+    walker.addEventListener('click', () => showEmote());
+
+    // start after a beat
+    setTimeout(() => {
+      pickTarget();
+      requestAnimationFrame(step);
+    }, 1500);
+
+    // random emotes while idle
+    setInterval(() => {
+      if (!isWalking && Math.random() < 0.3) showEmote();
+    }, 6000);
+  }
+</script>

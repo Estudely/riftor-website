@@ -1,0 +1,159 @@
+---
+interface Props {
+  name: 'hacker' | 'shield' | 'skull' | 'terminal' | 'key' | 'radar';
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 32, class: className = '' } = Astro.props;
+const s = size / 16; // scale factor from 16x16 base
+---
+
+{name === 'hacker' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <!-- hoodie -->
+    <rect x="5" y="1" width="6" height="1" fill="#52525b"/>
+    <rect x="4" y="2" width="8" height="1" fill="#52525b"/>
+    <!-- face -->
+    <rect x="5" y="3" width="6" height="1" fill="#e09f3e"/>
+    <rect x="4" y="4" width="8" height="3" fill="#e09f3e"/>
+    <!-- shades -->
+    <rect x="5" y="4" width="2" height="2" fill="#08080c"/>
+    <rect x="9" y="4" width="2" height="2" fill="#08080c"/>
+    <rect x="7" y="5" width="2" height="1" fill="#52525b"/>
+    <!-- lens glint -->
+    <rect x="5" y="4" width="1" height="1" fill="#5eead4"/>
+    <rect x="9" y="4" width="1" height="1" fill="#5eead4"/>
+    <!-- mouth -->
+    <rect x="6" y="6" width="4" height="1" fill="#a1a1aa"/>
+    <!-- hoodie body -->
+    <rect x="3" y="7" width="10" height="1" fill="#52525b"/>
+    <rect x="2" y="8" width="12" height="4" fill="#27272a"/>
+    <rect x="6" y="8" width="4" height="1" fill="#52525b"/>
+    <!-- hoodie pocket -->
+    <rect x="5" y="10" width="6" height="1" fill="#52525b"/>
+    <!-- hands on keyboard -->
+    <rect x="3" y="12" width="3" height="1" fill="#e09f3e"/>
+    <rect x="10" y="12" width="3" height="1" fill="#e09f3e"/>
+    <!-- keyboard -->
+    <rect x="2" y="13" width="12" height="2" fill="#52525b"/>
+    <rect x="3" y="13" width="1" height="1" fill="#5eead4"/>
+    <rect x="5" y="13" width="1" height="1" fill="#5eead4"/>
+    <rect x="7" y="13" width="2" height="1" fill="#5eead4"/>
+    <rect x="10" y="13" width="1" height="1" fill="#5eead4"/>
+    <rect x="12" y="13" width="1" height="1" fill="#5eead4"/>
+  </svg>
+)}
+
+{name === 'shield' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <rect x="4" y="1" width="8" height="1" fill="#f87171"/>
+    <rect x="3" y="2" width="10" height="1" fill="#f87171"/>
+    <rect x="2" y="3" width="12" height="6" fill="#f87171"/>
+    <rect x="3" y="9" width="10" height="1" fill="#f87171"/>
+    <rect x="4" y="10" width="8" height="1" fill="#f87171"/>
+    <rect x="5" y="11" width="6" height="1" fill="#f87171"/>
+    <rect x="6" y="12" width="4" height="1" fill="#f87171"/>
+    <rect x="7" y="13" width="2" height="1" fill="#f87171"/>
+    <!-- lock icon -->
+    <rect x="7" y="4" width="2" height="1" fill="#08080c"/>
+    <rect x="6" y="5" width="4" height="1" fill="#08080c"/>
+    <rect x="6" y="5" width="1" height="3" fill="#08080c"/>
+    <rect x="9" y="5" width="1" height="3" fill="#08080c"/>
+    <rect x="6" y="7" width="4" height="2" fill="#08080c"/>
+    <rect x="7" y="7" width="2" height="1" fill="#e09f3e"/>
+  </svg>
+)}
+
+{name === 'skull' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <rect x="5" y="1" width="6" height="1" fill="#d4d4d8"/>
+    <rect x="4" y="2" width="8" height="1" fill="#d4d4d8"/>
+    <rect x="3" y="3" width="10" height="5" fill="#d4d4d8"/>
+    <rect x="4" y="8" width="8" height="2" fill="#d4d4d8"/>
+    <!-- eyes -->
+    <rect x="4" y="4" width="3" height="3" fill="#08080c"/>
+    <rect x="9" y="4" width="3" height="3" fill="#08080c"/>
+    <!-- eye glow -->
+    <rect x="5" y="5" width="1" height="1" fill="#fb7185"/>
+    <rect x="10" y="5" width="1" height="1" fill="#fb7185"/>
+    <!-- nose -->
+    <rect x="7" y="7" width="2" height="1" fill="#a1a1aa"/>
+    <!-- teeth -->
+    <rect x="5" y="10" width="1" height="2" fill="#d4d4d8"/>
+    <rect x="7" y="10" width="1" height="2" fill="#d4d4d8"/>
+    <rect x="9" y="10" width="1" height="2" fill="#d4d4d8"/>
+    <rect x="6" y="10" width="1" height="1" fill="#08080c"/>
+    <rect x="8" y="10" width="1" height="1" fill="#08080c"/>
+    <rect x="10" y="10" width="1" height="1" fill="#08080c"/>
+    <!-- jaw -->
+    <rect x="5" y="12" width="6" height="1" fill="#a1a1aa"/>
+  </svg>
+)}
+
+{name === 'terminal' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <!-- monitor frame -->
+    <rect x="1" y="1" width="14" height="1" fill="#52525b"/>
+    <rect x="1" y="1" width="1" height="10" fill="#52525b"/>
+    <rect x="14" y="1" width="1" height="10" fill="#52525b"/>
+    <rect x="1" y="11" width="14" height="1" fill="#52525b"/>
+    <!-- screen -->
+    <rect x="2" y="2" width="12" height="9" fill="#101016"/>
+    <!-- prompt -->
+    <rect x="3" y="3" width="1" height="1" fill="#e09f3e"/>
+    <rect x="5" y="3" width="4" height="1" fill="#5eead4"/>
+    <!-- output lines -->
+    <rect x="3" y="5" width="6" height="1" fill="#52525b"/>
+    <rect x="3" y="7" width="8" height="1" fill="#52525b"/>
+    <rect x="3" y="9" width="3" height="1" fill="#e09f3e"/>
+    <!-- cursor blink -->
+    <rect x="7" y="9" width="1" height="1" fill="#5eead4"/>
+    <!-- stand -->
+    <rect x="6" y="12" width="4" height="1" fill="#52525b"/>
+    <rect x="5" y="13" width="6" height="1" fill="#52525b"/>
+    <rect x="4" y="14" width="8" height="1" fill="#27272a"/>
+  </svg>
+)}
+
+{name === 'key' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <!-- key ring -->
+    <rect x="3" y="2" width="4" height="1" fill="#e09f3e"/>
+    <rect x="2" y="3" width="1" height="3" fill="#e09f3e"/>
+    <rect x="7" y="3" width="1" height="3" fill="#e09f3e"/>
+    <rect x="3" y="6" width="4" height="1" fill="#e09f3e"/>
+    <rect x="3" y="3" width="4" height="3" fill="#08080c"/>
+    <!-- shaft -->
+    <rect x="7" y="4" width="5" height="2" fill="#e09f3e"/>
+    <!-- teeth -->
+    <rect x="12" y="4" width="2" height="2" fill="#e09f3e"/>
+    <rect x="12" y="6" width="1" height="2" fill="#e09f3e"/>
+    <rect x="10" y="6" width="1" height="1" fill="#e09f3e"/>
+  </svg>
+)}
+
+{name === 'radar' && (
+  <svg class:list={['pixel-art inline-block', className]} width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="image-rendering: pixelated">
+    <!-- dish -->
+    <rect x="5" y="1" width="6" height="1" fill="#5eead4"/>
+    <rect x="3" y="2" width="10" height="1" fill="#5eead4"/>
+    <rect x="2" y="3" width="12" height="2" fill="#5eead4"/>
+    <!-- center screen -->
+    <rect x="4" y="3" width="8" height="1" fill="#08080c"/>
+    <!-- sweep -->
+    <rect x="7" y="3" width="3" height="1" fill="#e09f3e"/>
+    <!-- blips -->
+    <rect x="5" y="2" width="1" height="1" fill="#4ade80"/>
+    <rect x="10" y="2" width="1" height="1" fill="#fb7185"/>
+    <!-- pole -->
+    <rect x="7" y="5" width="2" height="5" fill="#52525b"/>
+    <!-- base -->
+    <rect x="5" y="10" width="6" height="1" fill="#52525b"/>
+    <rect x="4" y="11" width="8" height="1" fill="#52525b"/>
+    <!-- signals -->
+    <rect x="1" y="6" width="1" height="1" fill="#5eead4" opacity="0.4"/>
+    <rect x="14" y="7" width="1" height="1" fill="#5eead4" opacity="0.4"/>
+    <rect x="3" y="8" width="1" height="1" fill="#e09f3e" opacity="0.3"/>
+  </svg>
+)}
